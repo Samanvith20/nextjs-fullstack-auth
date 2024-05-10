@@ -13,7 +13,7 @@ connectDb()
              if(!user){
                 return NextResponse.json({error: "Invalid token"}, {status: 400})
              }
-             console.log(user);
+            //  console.log(user);
              user.isVerfied=true;
              user.verifyToken=undefined;
              user.verifyTokenExpiry=undefined;
