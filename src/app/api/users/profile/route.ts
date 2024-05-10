@@ -5,6 +5,8 @@ import { NextRequest, NextResponse } from "next/server";
 export async function POST(request:NextRequest){
       try {
            const userId=await getDatafromToken(request)
+           console.log(userId);
+           
           const user = await User.findOne({_id: userId}).select("-password");
         return NextResponse.json({
             mesaaage: "User found",
